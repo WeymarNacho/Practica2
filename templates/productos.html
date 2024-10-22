@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<footer>
+    <nav class="mi-menu">
+        <ul>
+         
+            <li><a href="{{ url_for('index') }}"    >  INCRIPCION EN CURSO      </a></li>
+            <li><a href="{{ url_for('usuario') }}"  >  REGISTRO DE USUARIO      </a></li>
+            <li><a href="{{ url_for('productos')}}" >  REGISTRO DE PRODUCTOS    </a></li>
+            <li><a href="{{ url_for('libros')}}"    >  REGISTRO DE LIBROS       </a></li>
+
+
+        </ul>
+    </nav>
+</footer>
+<body>
+    <h1>INSCRIPCION EN CURSO</h1>
+
+    <form action="{{ url_for('procesoP') }}" method="POST">
+        <label for="">PRODUCTO: </label>
+        <input type="text" name="product">
+        <br>
+        <select id="carrito" name="carrito" required>
+            <option value="">Seleccione el producto</option>
+            <option value="pepsi">    pepsi     </option>
+            <option value="coca cola">coca cola </option>
+            <option value="coca kina">coca kina </option>
+            <option value="simba">    simba     </option>
+        </select>
+        <br>
+        <label for="">Existencia :</label>
+        <input type="text" name="existencia" >
+        <br>
+        <label for="">PRECIO :</label>
+        <input type="text" name="precio">
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

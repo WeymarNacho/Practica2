@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<footer>
+    <nav class="mi-menu">
+        <ul>
+         
+            <li><a href="{{ url_for('index') }}"    >  INCRIPCION EN CURSO      </a></li>
+            <li><a href="{{ url_for('usuario') }}"  >  REGISTRO DE USUARIO      </a></li>
+            <li><a href="{{ url_for('productos')}}" >  REGISTRO DE PRODUCTOS    </a></li>
+            <li><a href="{{ url_for('libros')}}"    >  REGISTRO DE LIBROS       </a></li>
+
+        </ul>
+    </nav>
+</footer>
+<body>
+    <h1>INSCRIPCION EN CURSO</h1>
+
+    <form action="{{ url_for('procesoC') }}" method="POST">
+        <label for="">NOMBRE: </label>
+        <input type="text" name="nombre">
+        <br>
+        <label for="">APELLIDO: </label>
+        <input type="text" name="apellido">
+        <br>
+        <label for="">Correo Electronico: </label>
+        <input type="email" name="correo">
+        <br>
+        <label for="">Contraseña: </label>
+        <input type="password" name="clave">
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/datos.css')}}">
+
+</head>
+<body>
+   <h1>recibido</h1>
+
+   <p>NOMBRE: {{nombre}}</p>
+   <p>APELLIDO: {{apellido}}</p>
+   <p>lenguajes :</p>
+   {% if lenguajes %}
+   <ul>
+    {% for item in lenguajes%}
+    <li>  {{ item }}  </li>
+    {% endfor %}
+   </ul>
+   {% else %}
+   <p>nada</p>
+   {% endif %}
+
+   <a href="{{ url_for('index')}}"> volver</a>
+</body>
+</html>

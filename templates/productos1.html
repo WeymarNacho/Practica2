@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/datos.css')}}">
+
+</head>
+<body>
+   <h1>recibido</h1>
+
+   <p>PRODUCTO: {{product}}</p>
+   {% if carrito %}
+   <ul>
+    {% for item in carrito%}
+    <li>  {{ item }}  </li>
+    {% endfor %}
+   </ul>
+   {% else %}
+   <p>nada</p>
+   {% endif %}
+   <p>Existencia: {{existencia}}</p>
+   <p>PRECIO: {{precio}}</p>
+   <a href="{{ url_for('index')}}"> volver</a>
+</body>
+</html>
