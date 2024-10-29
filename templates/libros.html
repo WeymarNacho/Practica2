@@ -22,7 +22,7 @@
     </nav>
 </footer>
 <body>
-    <h1>INSCRIPCION EN CURSO</h1>
+    <h1>REGISTROS DE LIBROS</h1>
 
     <form action="{{ url_for('procesoL') }}" method="POST">
         <label for="">TITULO: </label>
@@ -32,8 +32,8 @@
         <input type="text" name="autor"> 
         <br>
         <label for="">MEDIO</label>
-        <input type="checkbox" name="medio" value="fisico">fisico <br>
-        <input type="checkbox" name="medio" value="magnetico">magnetico <br>
+        <input type="checkbox" name="medio" value="FISICO">FISICO <br>
+        <input type="checkbox" name="medio" value="MAGNETICO">MAGNETICO <br>
         <br>
         <label for="resumen">RESUMEN: </label>
         <textarea id="resumen" name="resumen" rows="1" oninput="autoResize(this)" required></textarea>

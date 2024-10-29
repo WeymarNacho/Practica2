@@ -22,24 +22,25 @@
     </nav>
 </footer>
 <body>
-    <h1>INSCRIPCION EN CURSO</h1>
+    <h1>REGISTRO DE PRODUCTOS</h1>
 
     <form action="{{ url_for('procesoP') }}" method="POST">
         <label for="">PRODUCTO: </label>
         <input type="text" name="product">
         <br>
+        <label for="">CATEGORIA</label>
         <select id="carrito" name="carrito" required>
             <option value="">Seleccione el producto</option>
-            <option value="pepsi">    pepsi     </option>
-            <option value="coca cola">coca cola </option>
-            <option value="coca kina">coca kina </option>
-            <option value="simba">    simba     </option>
+            <option value="REFRESCO">REFRESCO</option>
+            <option value="FRUTAS">FRUTAS</option>
+            <option value="GOLOSINAS">GOLOSINAS</option>
+            <option value="VERDURAS">VERDURAS</option>
         </select>
         <br>
-        <label for="">Existencia :</label>
+        <label for="">CANTIDAD:</label>
         <input type="text" name="existencia" >
         <br>
-        <label for="">PRECIO :</label>
+        <label for="">PRECIO:</label>
         <input type="text" name="precio">
         <br>
         <input type="submit">
